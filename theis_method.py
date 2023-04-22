@@ -50,7 +50,8 @@ if __name__ == "__main__":
     params_opt, params_cov = curve_fit(
         theis_fit, 
         (np.repeat(r, n_points), t, np.repeat(Q, n_points)), 
-        s_data
+        s_data,
+		p0=params_guess		
     )
     
     # Extract the estimated parameters
